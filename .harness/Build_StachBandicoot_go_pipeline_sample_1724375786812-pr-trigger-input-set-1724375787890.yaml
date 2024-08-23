@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_StachBandicoot_go_pipeline_sample_1724375786812-pr-trigger-input-set
+  identifier: Build_StachBandicoot_go_pipeline_sample_1724375786812prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: HelloWorld
+  pipeline:
+    identifier: Build_StachBandicoot_go_pipeline_sample_1724375786812
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
