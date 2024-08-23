@@ -42,7 +42,7 @@ pipeline:
                       set +e
                       go get gotest.tools/gotestsum
                       CGO_ENABLED=0 GOARCH=amd64 go build -a -tags netgo
-                      exit go
+                      exit 0
               - step:
                   type: BuildAndPushDockerRegistry
                   name: Build and Push image to docker Hub
@@ -58,6 +58,7 @@ pipeline:
           runtime:
             type: Cloud
             spec: {}
+        description: ""
   properties:
     ci:
       codebase:
